@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UniRed - Presentación</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <!-- AOS (Animate on Scroll) CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
+    }
+    .navbar {
+      background-color: #3498db;
+    }
+    .navbar-brand,
+    .navbar-nav .nav-link {
+      color: #fff !important;
+    }
+    .jumbotron {
+      background-image: linear-gradient(135deg, #3498db, #2ecc71);
+      color: #fff;
+      padding: 80px 20px;
+      text-align: center;
+      margin-bottom: 0;
+      border-radius: 0 0 50% 50%;
+      overflow: hidden;
+    }
+    .jumbotron h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    .jumbotron p {
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+    .jumbotron .btn-primary {
+      background-color: #e74c3c;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      transition: background-color 0.3s;
+    }
+    .jumbotron .btn-primary:hover {
+      background-color: #c0392b;
+    }
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-top: 50px;
+      margin-bottom: 30px;
+      text-align: center;
+      color: #3498db;
+    }
+    .section-subtitle {
+      font-size: 1.25rem;
+      color: #555;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .feature-box {
+      background-color: #fff;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+    .feature-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+    }
+    .feature-box i {
+      margin-bottom: 15px;
+    }
+    .timeline {
+      position: relative;
+      margin: 50px 0;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background-color: #3498db;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -2px;
+    }
+    .timeline-content {
+      padding: 20px;
+      background-color: #fff;
+      position: relative;
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .timeline-item {
+      padding: 20px;
+      position: relative;
+      width: 50%;
+    }
+    .timeline-item:nth-child(odd) {
+      left: 0;
+    }
+    .timeline-item:nth-child(even) {
+      left: 50%;
+    }
+    .timeline-item::after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: #2ecc71;
+      border: 4px solid #fff;
+      z-index: 1;
+      left: -17px;
+    }
+    .team-member {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .team-member img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .team-member img:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    }
+    .team-member h5 {
+      margin-top: 15px;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #3498db;
+    }
+    .team-member p {
+      color: #555;
+    }
+    .team-member a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.3s;
+    }
+    .team-member a:hover {
+      color: #2980b9;
+    }
+    .footer {
+      background-color: #3498db;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 50px;
+    }
+    .footer a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">UniRed</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#bienvenida">Bienvenida</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#vision">Visión General</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#problematica">Problemática</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#solucion">Solución</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#marketing">Marketing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#responsabilidades">Responsabilidades</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#conclusion">Conclusión</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#planificacion">Planificación</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Jumbotron -->
+  <div class="jumbotron">
+    <h1 class="display-4 animate__animated animate__fadeInDown">Bienvenido a UniRed</h1>
+    <p class="lead animate__animated animate__fadeInUp">Juntos llevaremos UniRed al siguiente nivel.</p>
+    <a class="btn btn-primary btn-lg animate__animated animate__fadeInUp animate__delay-1s" href="#bienvenida" role="button">Comenzar</a>
+  </div>
+
+  <!-- Bienvenida e Introducción -->
+  <div id="bienvenida" class="container" data-aos="fade-up">
+    <h2 class="section-title">Bienvenida e Introducción</h2>
+    <p class="section-subtitle">Gracias por estar aquí hoy. Hoy discutiremos cómo llevar a UniRed al siguiente nivel para asegurar su éxito a largo plazo.</p>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="feature-box" data-aos="fade-right">
+          <i class="fas fa-handshake fa-3x" style="color: #3498db;"></i>
+          <p>"Imaginen una universidad donde toda la información está al alcance de un clic. Un entorno donde cada estudiante puede conectar, compartir y aprender sin límites. Eso es lo que UniRed está logrando, y con su apoyo, podemos hacer que crezca aún más."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Visión General de UniRed -->
+  <div id="vision" class="container" data-aos="fade-up">
+    <h2 class="section-title">Visión General de UniRed</h2>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="feature-box" data-aos="fade-right">
+          <i class="fas fa-university fa-3x" style="color: #2ecc71;"></i>
+          <p>UniRed es una plataforma diseñada para centralizar toda la información universitaria en un solo lugar. Resuelve el problema de la dispersión de información y crea una comunidad más unida y conectada.</p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="feature-box" data-aos="fade-left">
+          <i class="fas fa-link fa-3x" style="color: #e74c3c;"></i>
+          <h5>Beneficios:</h5>
+          <ul>
+            <li>Conexión: "UniRed facilita la comunicación entre toda la comunidad universitaria, desde estudiantes hasta profesores."</li>
+            <li>Acceso Centralizado: "Toda la información relevante, desde anuncios hasta materiales académicos, está disponible en un solo lugar."</li>
+            <li>Facilidad de Uso: "La interfaz intuitiva permite que cualquier persona acceda a lo que necesita sin complicaciones."</li>
+            <li>Expansión de Oportunidades: "Cada facultad puede autogestionarse, lo que fortalece la estructura y fomenta la autonomía."</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Problemática: Desafíos de los Servidores -->
+  <div id="problematica" class="container" data-aos="fade-up">
+    <h2 class="section-title">Problemática: Desafíos de los Servidores</h2>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="feature-box" data-aos="fade-right">
+          <i class="fas fa-server fa-3x" style="color: #f39c12;"></i>
+          <p>Uno de los principales desafíos es el costo de mantener la plataforma operativa y en crecimiento. Heroku y AWS son esenciales, pero sus costos mensuales son significativos.</p>
+          <p>Impacto potencial: "Sin una solución clara, podríamos enfrentar limitaciones que afecten la estabilidad de UniRed y, en consecuencia, su crecimiento."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- La Solución: Colaboración y Expansión -->
+  <div id="solucion" class="container" data-aos="fade-up">
+    <h2 class="section-title">La Solución: Colaboración y Expansión</h2>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="feature-box" data-aos="fade-right">
+          <i class="fas fa-hands-helping fa-3x" style="color: #27ae60;"></i>
+          <p>La mejor manera de afrontar este desafío es compartir los costos. Se propone dividir la responsabilidad financiera de los servidores entre los miembros del equipo, lo que permitirá mantener la plataforma sin interrupciones.</p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="feature-box" data-aos="fade-left">
+          <i class="fas fa-chart-line fa-3x" style="color: #2980b9;"></i>
+          <p>Estrategia de expansión: "Para asegurar el crecimiento continuo de UniRed, es necesario expandir la plataforma a todas las facultades. Cada facultad podría tener un representante encargado de la gestión y, eventualmente, contribuir a los costos."</p>
+          <p>Monetización: "En el futuro, los representantes podrían acceder a opciones exclusivas, como fijar publicaciones, lo que no solo les daría más visibilidad, sino que también abriría nuevas vías de monetización."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Estrategia de Marketing y Crecimiento -->
+  <div id="marketing" class="container" data-aos="fade-up">
+    <h2 class="section-title">Estrategia de Marketing y Crecimiento</h2>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="feature-box" data-aos="fade-right">
+          <i class="fas fa-bullhorn fa-3x" style="color: #8e44ad;"></i>
+          <p>Promoción interna: "Es fundamental que cada miembro del equipo promueva UniRed en sus respectivas redes de contacto, facultades y círculos académicos."</p>
+          <p>Engagement y participación: "A medida que más estudiantes y profesores se unan, la plataforma será más valiosa y atractiva para todos."</p>
+          <p>Visibilidad a largo plazo: "Con el tiempo, UniRed tiene el potencial de convertirse en la principal fuente de información universitaria en la UNAS y más allá."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Distribución de Responsabilidades y Finanzas -->
+  <div id="responsabilidades" class="container" data-aos="fade-up">
+    <h2 class="section-title">Distribución de Responsabilidades y Finanzas</h2>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="feature-box" data-aos="fade-right">
+          <i class="fas fa-coins fa-3x" style="color: #e67e22;"></i>
+          <p>Propuesta de costos: "Se propone que cada miembro contribuya con una cantidad mensual. Se presentarán los números específicos para que todos sepan cuánto les tocaría aportar."</p>
+          <p>Involucramiento de representantes: "A medida que UniRed se establezca, los representantes de facultades podrían ayudar con estos costos, aliviando la carga financiera para todos."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Conclusión y Llamada a la Acción -->
+  <div id="conclusion" class="container" data-aos="fade-up">
+    <h2 class="section-title">Conclusión y Llamada a la Acción</h2>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="feature-box" data-aos="fade-right">
+          <i class="fas fa-check-circle fa-3x" style="color: #2ecc71;"></i>
+          <p>Resumen: "UniRed tiene el potencial de transformar la manera en que interactuamos y compartimos información en la universidad. Es una herramienta poderosa que mejorará con el tiempo y la colaboración de todos."</p>
+          <p>Compromiso: "Para avanzar, es necesario que cada uno confirme su compromiso, tanto con el trabajo como con la contribución financiera necesaria para mantener la plataforma."</p>
+          <p>Llamada a la acción: "Invitamos a definir hoy mismo quiénes asumirán esta responsabilidad, establecer una fecha límite para los aportes y poner en marcha la expansión de UniRed en todas las facultades."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Planificación y Fechas Clave -->
+  <div id="planificacion" class="container" data-aos="fade-up">
+    <h2 class="section-title">Planificación y Fechas Clave</h2>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="feature-box" data-aos="fade-right">
+          <i class="fas fa-calendar-alt fa-3x" style="color: #3498db;"></i>
+          <p>Propuesta de fechas: "Se sugiere comenzar a contribuir a los costos de los servidores a partir del próximo mes, con un plazo específico para realizar los aportes antes de [fecha límite]. Además, se propone fijar una reunión para revisar el progreso en una o dos semanas."</p>
+          <p>Ejecución del plan: "La expansión a las facultades podría comenzar con la designación de representantes desde la próxima semana, lo que permitirá estructurar mejor la plataforma y garantizar que cada facultad esté bien representada y gestionada."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 UniRed. Todos los derechos reservados.</p>
+      <p><a href="#">Términos de uso</a> | <a href="#">Política de privacidad</a> | <a href="#">Contacto</a></p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- AOS (Animate on Scroll) JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
